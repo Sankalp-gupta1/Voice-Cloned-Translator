@@ -1,5 +1,31 @@
 # Voice-Cloned Translator
 
+## Live app
+
+**https://voice-cloned-translator-demo.vercel.app/**
+
+The repository's full local workflow depends on heavyweight voice-cloning models and Ollama.
+
+The public hosted mode goes as far as a browser/serverless environment can honestly go without a GPU/model service:
+
+- record a local reference voice sample,
+- play the reference sample back,
+- translate English text into a selected target language,
+- synthesize translated speech using an installed browser voice.
+
+The hosted version **does not claim browser TTS is voice cloning**. Full cloning remains available only through the repository's local OpenVoice/XTTS-style stack or a dedicated model service.
+
+Only record or clone voices you have permission to use.
+
+### Run locally
+
+```bash
+cd web
+python -m http.server 8000
+```
+
+---
+
 ## Overview
 
 Voice-Cloned Translator is a sophisticated web application designed to facilitate real-time audio translation with voice cloning capabilities. The system transcribes spoken audio in one language, translates the text to a target language, and generates synthesized speech that mimics the original speaker's voice using advanced AI models.
